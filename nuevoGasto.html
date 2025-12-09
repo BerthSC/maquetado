@@ -10,7 +10,402 @@
 </head>
 
 <body>
-   
+   <nav class="navbar navbar-expand-lg navbar-dark navbar-ejidal">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tractor me-2"></i>
+                Sistema Ejidal
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-user-circle me-1"></i> Nombre Usuario
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-user me-2"></i>Perfil</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-cog me-2"></i>Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt me-2"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+ <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar bg-dark sidebar collapse" id="sidebarMenu">
+            <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="principal.html">
+                                <i class="fas fa-home"></i> Inicio
+                            </a>
+                        </li>
+                        
+                      
+                       <!-- Módulo de Usuarios -->
+                       <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#usuariosMenu">
+                            <i class="fas fa-users"></i> Usuarios
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="usuariosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">
+                                        <i class="far fa-address-card"></i> Nuevo Usuario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-search"></i> Buscar Usuario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Listado Completo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-file-export"></i> Reportes
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-search"></i> Documentos Usuario
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                      
+                        <!-- Módulo de Ejidatarios -->
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#ejidatariosMenu">
+                            <i class="fas fa-users"></i> Ejidatarios
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="ejidatariosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="nuevoEjidatario.html">
+                                        <i class="far fa-address-card"></i> Nuevo Ejidatario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-search"></i> Buscar Ejidatario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="listadoEjidatarios.html">
+                                        <i class="fas fa-list"></i> Listado Completo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-file-export"></i> Reportes
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Faenas -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#faenasMenu">
+                            <i class="fas fa-clipboard-check"></i> Faenas
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="faenasMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nueva Faena
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-calendar-alt"></i> Calendario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Listado
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Asambleas -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#asambleasMenu">
+                            <i class="fas fa-clipboard-check"></i> Asambleas
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="asambleasMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nueva Asamblea
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-calendar-alt"></i> Calendario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-calendar-alt"></i> Acta de Asableas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Listado
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                    <!-- Módulo de Asistencia -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#asistenciaMenu">
+                            <i class="fas fa-list-check"></i> Pase de Lista
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="asistenciaMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Pase
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-history"></i> Historial
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-chart-bar"></i> Estadísticas
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Descuentos -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#descuentosMenu">
+                            <i class="fas fa-money-bill-wave"></i> Descuentos
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="descuentosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Descuento
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Registros
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-file-invoice-dollar"></i> Reportes
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Utilidades -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#utilidadesMenu">
+                            <i class="fas fa-hand-holding-usd"></i> Reparto Utilidades
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="utilidadesMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-calculator"></i> Calcular
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-money-bill-trend-up"></i> Distribuir
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-history"></i> Historial
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Préstamos -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#prestamosMenu">
+                            <i class="fas fa-hand-holding-heart"></i> Préstamos
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="prestamosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Préstamo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Activos
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-history"></i> Historial
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Parcelas -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#parcelasMenu">
+                            <i class="fas fa-map-marked-alt"></i> Parcelas
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="parcelasMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nuevaParcela.html">
+                                        <i class="fas fa-plus-circle"></i> Nueva Parcela
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-map"></i> Mapa
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="listadoParcelas.html">
+                                        <i class="fas fa-list"></i> Listado
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                     <!-- Módulo de Gastos -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#gastosMenu">
+                            <i class="fas fa-wallet"></i> Gastos
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="gastosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nuevoGasto.html">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Gasto
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="consultaGasto.html">
+                                        <i class="fas fa-list"></i> Consultar Gastos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Inventario -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#inventarioMenu">
+                            <i class="fas fa-warehouse"></i> Inventario
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="inventarioMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="nuevoArticulo.html">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Artículo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Listado
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-exchange-alt"></i> Movimientos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <!-- Módulo de Apoyos -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#apoyosMenu">
+                            <i class="fas fa-hands-helping"></i> Apoyos Sociales
+                            <i class="fas fa-angle-down float-end mt-1"></i>
+                        </a>
+                        <div class="collapse" id="apoyosMenu">
+                            <ul class="nav flex-column submenu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-plus-circle"></i> Nuevo Apoyo
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-list"></i> Registros
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-chart-pie"></i> Reportes
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                        
+                        <!-- Módulo de Reportes -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-chart-bar"></i> Reportes
+                            </a>
+                        </li>
+                        
+                        <!-- Configuración (solo para admin) -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-cogs"></i> Configuración
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
     <!-- Contenido principal -->
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
         <!-- Encabezado de módulo -->
@@ -108,7 +503,7 @@
 
     <!-- Iconos -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    </div> 
 
-</body>
 
 </html>
